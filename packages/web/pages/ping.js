@@ -7,7 +7,7 @@ export default class Index extends Component {
     console.log(apiUrl)
 
     const response = await fetch(
-      `${apiUrl}/ping`
+      `/api/ping`
     ).then(response => response.json())
 
     return { response }

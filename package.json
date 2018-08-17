@@ -4,10 +4,10 @@
   "description": "The Workspace",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"lerna run dev --scope web --scope api\" \"micro-proxy -r rules-dev.json\"",
+    "dev": "concurrently \"lerna run dev --scope web --scope api\"",
     "dev:web": "lerna run dev --scope web",
     "dev:api": "lerna run dev --scope api",
-    "start": "concurrently \"lerna run start --scope web --scope api\" \"micro-proxy -r rules-dev.json\"",
+    "start": "concurrently \"lerna run start --scope web --scope api\"",
     "start:web": "lerna run start --scope web",
     "start:api": "lerna run start --scope api"
   },

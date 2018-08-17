@@ -6,6 +6,7 @@ const cors = require('cors')
 
 // Ours
 const prefix = require('./middlewares/prefix')
+const sse = require('./middlewares/sse')
 const error404Handler = require('./middlewares/404')
 const errorHandler = require('./middlewares/errors')
 
@@ -13,11 +14,14 @@ const index = require('./controllers/index')
 
 const app = express();
 
+
+
 app.use(prefix('api'))
 app.use(logger('dev'))
 app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
+app.use(sse);
 
 app.use('/', index)
 
